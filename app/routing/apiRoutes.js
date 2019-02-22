@@ -8,7 +8,7 @@ module.exports=function(app){
     })
     
     app.post("/api/friends", function (req, res) {
-        var profile = req.body.profile
+        var profile = req.body
         var result = 0
         var bestmatch = {
             name: "",
@@ -24,7 +24,8 @@ module.exports=function(app){
                 bestmatch.url = element.url
             }
         })
-        data.push(profile)
+         data.profiles.push(profile)
+         console.log(data.profiles)
         return res.json(bestmatch)
     })
 }
