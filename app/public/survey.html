@@ -1,238 +1,330 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel ="stylesheet" href="styles.css"> -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <style>
+    body{
+      color:#0E53C3;
+    }
+    .survey{
+      border: black solid .5px
+    }
+    .text_box{
+      justify-content: flex-start;
+      align-items: center;
+     
+    }
+    .questions,.text_box{
+      margin: 10px 0;
+    }
+    .form-control{
+      width: auto;
+    }
+    h5{
+      margin-right: 10px;
+    }
+    #best_match_name {
 
-    <!-- <script src="survey.js"></script> -->
+     max-width: 460px;
+    }
+    #best_match_pic {
+      text-align: center;
+      max-width: 460px;
+    }
+    .links{
+      margin-right:10px; 
+    }
+  </style>
 </head>
+
 <body>
-    <div class="conttainer">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <h1 class="display-4">Fluid jumbotron</h1>
-              <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  <div class="container">
+    <h1>Survey</h1>
+    <div class="row survey">
+      <div class="col-12">
+        <div class=" text_box row">
+          <h5>Your Name (Required)</h5>
+          <input type="text" id="name" class="form-control info" aria-label="Text input with segmented dropdown button">
+        </div>
+        <div class=" text_box row">
+          <h5>Your Photo (Required)</h5>
+          <input type="text" id="img" class="form-control info" aria-label="Text input with segmented dropdown button">
+        </div>
+        <div class="row questions">
+          <h5>Question 1</h5>
+          <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Options</label>
             </div>
+            <select class="choices" id="q1">
+              <option value="" selected>Choose...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
           </div>
 
-     <input type="text" id="name"class="form-control" aria-label="Text input with segmented dropdown button">
-     <input type="text" id="img"class="form-control" aria-label="Text input with segmented dropdown button">
-
-
-
-     <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Options</label>
-        </div>
-        <select class="choices" id="q1">
-          <option selected>Choose...</option>
-         <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-
-   
-     <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Options</label>
-        </div>
-        <select class="choices" id="q2">
-          <option selected>Choose...</option>
-         <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-
-
-         
-     <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Options</label>
-        </div>
-        <select class="choices" id="q3">
-          <option selected>Choose...</option>
-         <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-
-         
-     <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Options</label>
-        </div>
-        <select class="choices" id="q4">
-          <option selected>Choose...</option>
-         <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-
-         
-     <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Options</label>
-        </div>
-        <select class="choices" id="q5">
-          <option selected>Choose...</option>
-         <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-
-         
-     <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Options</label>
-        </div>
-        <select class="choices" id="q6">
-          <option selected>Choose...</option>
-         <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-
-
-         
-     <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Options</label>
-        </div>
-        <select class="choices" id="q7">
-          <option selected>Choose...</option>
-         <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-
-
-         
-     <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Options</label>
-        </div>
-        <select class="choices" id="q8">
-          <option selected>Choose...</option>
-         <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-
-         
-     <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Options</label>
-        </div>
-        <select class="choices" id="q9">
-          <option selected>Choose...</option>
-         <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-
-
-         
-     <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Options</label>
-        </div>
-        <select class="choices" id="q10">
-          <option selected>Choose...</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-      </div>
-
-      <button id="submit">Submit </button>
-
-
-      <a href="/api/friends">Frineds List</a> |
-          <a href="/api/waitlist">API Wait List</a>
-    </div>
-
-    <div class="modal" tabindex="-1" role="dialog" id="best_match">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Best Matched Character</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true"id="close">&times;</span>
-            </button>
+          <h5>Question 2</h5>
+          <h6>Generally speaking, you rely more on your experience thant your imagination.</h6>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            </div>
+            <select class="choices" id="q2">
+              <option value="" selected>Choose...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
           </div>
-          <div class="modal-body">
-           <h3 id="best_match_name"></h3>
-           <img src="" alt="profile photo" id="best_match_pic" >
+
+
+          <h5>Question 3</h5>
+          <h6>You find it easy to stay relaxed and focused even when there is some pressure.</h6>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            </div>
+            <select class="choices" id="q3">
+              <option value="" selected>Choose...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
           </div>
-          <div class="modal-footer">
-           
+
+          <h5>Question 4</h5>
+          <h6>You rarely do something just our of sheer curiosity.</h6>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            </div>
+            <select class="choices" id="q4">
+              <option value="" selected>Choose...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
           </div>
+
+          <h5>Question 5</h5>
+          <h6>People can rarely upset you.</h6>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            </div>
+            <select class="choices" id="q5">
+              <option value="" selected>Choose...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+          <h5>Question 6</h5>
+          <h6>It is often difficult for you to realte to other people's feelings.</h6>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            </div>
+            <select class="choices" id="q6">
+              <option value="" selected>Choose...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+
+          <h5>Question 7</h5>
+          <h6>In a discussion,truth should be more important than people's sensitivities.</h6>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            </div>
+            <select class="choices" id="q7">
+              <option value="" selected>Choose...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+
+          <h5>Question 8</h5>
+          <h6>You rarely get carried away by fantasies and ideas.</h6>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            </div>
+            <select class="choices" id="q8">
+              <option value="" selected>Choose...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+          <h5>Question 9</h5>
+          <h6>You think that everyone's views should be respected regardless of whether they are supported by facts or
+            not.</h6>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            </div>
+            <select class="choices" id="q9">
+              <option value="" selected>Choose...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+
+          <h5>Question 10</h5>
+          <h6>You feel more energetic after spending time with a group of people.</h6>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Options</label>
+            </div>
+            <select class="choices" id="q10">
+              <option value="" selected>Choose...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+
+          <button id="submit" class="btn">Submit </button>
         </div>
       </div>
     </div>
+    <div class="row">
+      <a class="links" href="/api/friends">Frineds List</a>
+      <a class="links" href="/api/waitlist">Git Repo</a>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="modal" tabindex="-1" role="dialog" id="best_match">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Best Matched Character</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true" id="close">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h3 id="best_match_name"> name</h3>
+          <img src="https://fakeimg.pl/640x360/" alt="profile photo" id="best_match_pic">
+        </div>
+        <div class="modal-footer">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
+
 </html>
 <script>
-      document.getElementById("close").addEventListener("click",function(){
-        document.getElementById("best_match").style.display="none"
-    })
-    document.getElementById("submit").addEventListener("click", function () {
-       
-        var profile = {
-            name: document.getElementById("name").value,
-            photo: document.getElementById("img").value,
-            score: []
+  document.getElementById("close").addEventListener("click", function () {
+    document.getElementById("best_match").style.display = "none"
+  })
+  document.getElementById("submit").addEventListener("click", function (event) {
+    event.preventDefault();
+
+    function valid() {
+      var text = document.getElementsByClassName("info")
+      var options = document.getElementsByClassName("choices")
+      let valid = true
+
+      for (let i = 0; i < text.length; i++) {
+        text[i].style.border = ""
+        if (text[i].value === "") {
+          text[i].style.border = " 10px solid red"
+          valid = false
         }
-        var questions = document.getElementsByClassName("choices")
-        for (let i = 0; i < questions.length; i++) {
-            profile.score.push(parseInt(questions[i].value))
+      }
+
+      for (let i = 0; i < options.length; i++) {
+        options[i].style.border = ""
+        if (options[i].value === "") {
+          options[i].style.border = " 10px solid red"
+          valid = false
         }
+      }
+      return valid;
+    }
+    if (valid()) {
+      console.log("valid")
+      var profile = {
+        name: document.getElementById("name").value,
+        photo: document.getElementById("img").value,
+        score: [document.getElementById("q1").value,
+          document.getElementById("q2").value,
+          document.getElementById("q3").value,
+          document.getElementById("q4").value,
+          document.getElementById("q5").value,
+          document.getElementById("q6").value,
+          document.getElementById("q7").value,
+          document.getElementById("q8").value,
+          document.getElementById("q9").value,
+          document.getElementById("q10").value
+        ]
+      }
 
-        console.log(profile)
+      $.post("/api/friends", profile).then(function (data) {
+        console.log(data)
+        document.getElementById("best_match").style.display = "block"
+        document.getElementById("best_match_name").innerHTML = data.name
+        document.getElementById("best_match_pic").setAttribute("src", data.url)
+
+      })
+    }
 
 
-        $.post("/api/friends", profile).then(function (data) {
-            document.getElementById("best_match").style.display="block"
-            document.getElementById("best_match_name").innerHTML=data.name
-            document.getElementById("best_match_pic").setAttribute("src",data.url)
-
-        })
-    })
-
+  })
 </script>
