@@ -25,7 +25,6 @@ module.exports=function(app){
             }
         })
          data.profiles.push(profile)
-         console.log(data.profiles)
         return res.json(bestmatch)
     })
 }
